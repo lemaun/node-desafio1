@@ -90,14 +90,6 @@ app.post('/todos', checksExistsUserAccount, (request, response) => {
 app.put('/todos/:id', checksExistsTodo, (request, response) => {
   const { title, deadline } = request.body;
   const { todo } = request;
-  console.log(todo);
-  // const todos = user.todos.map((td) => {
-  //   if (td.id === todo.id){
-  //     td.title = title;
-  //     td.deadline = new Date(deadline);
-  //   }
-  //   return td;
-  // });
     
   todo.title = title;
   todo.deadline = deadline;
